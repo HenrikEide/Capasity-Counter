@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".FappActivity">
+    <ImageView
+            android:layout_width="265dp"
+            android:layout_height="417dp" app:srcCompat="@drawable/cretinpic"
+            android:id="@+id/cretinPic"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="220dp"
+            android:layout_marginEnd="72dp" android:layout_marginRight="72dp"
+            app:layout_constraintEnd_toEndOf="parent" android:contentDescription="@string/buggypic"/>
+    <TextView
+            android:text="@string/welcome_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/clickCounter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="192dp"
+            app:layout_constraintEnd_toEndOf="parent" android:padding="10dp" android:paddingLeft="10dp"
+            android:paddingTop="10dp" android:paddingRight="10dp" android:textColor="@color/text_color"
+            android:textSize="@dimen/text_size" app:layout_constraintStart_toStartOf="parent"
+    />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
