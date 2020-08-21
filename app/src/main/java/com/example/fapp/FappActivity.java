@@ -45,6 +45,6 @@ public class FappActivity extends AppCompatActivity {
             default:
                 countAsText = String.format("%d times", counter);
         }
-        message.setText(String.format("You touched the bug %s", countAsText));
+        message.setText(String.format("You touched the cretin %s", countAsText));
     }
 }
