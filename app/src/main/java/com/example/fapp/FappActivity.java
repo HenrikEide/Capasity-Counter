@@ -16,7 +16,7 @@ public class FappActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        message = findViewById(R.id.clickCounter);
+        message = findViewById(R.id.ledigCounter);
         ImageView cretin = findViewById(R.id.cretinPic);
 
         //Define and attach click listener
