@@ -40,7 +40,7 @@ public class FappActivity extends AppCompatActivity {
                 countAsText = "once";
                 break;
             case 2:
-                countAsText = "twice";
+                countAsText = "twices";
                 break;
             default:
                 countAsText = String.format("%d times", counter);
