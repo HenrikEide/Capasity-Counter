@@ -17,7 +17,7 @@ public class FappActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         message = findViewById(R.id.ledigCounter);
-        ImageView cretin = findViewById(R.id.cretinPic);
+        ImageView cretin = findViewById(R.id.arriving);
 
         //Define and attach click listener
         cretin.setOnClickListener(new View.OnClickListener() {
