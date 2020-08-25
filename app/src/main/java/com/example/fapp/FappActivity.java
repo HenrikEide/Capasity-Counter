@@ -7,8 +7,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class FappActivity extends AppCompatActivity {
-    private TextView message;
-    private int counter = 0;
+    private TextView textLedig;
+    private TextView textOpptatt;
+    private int romKapasitet = 55;
+    private int seterLedig = 55;
+    private int seterOpptatt = 0;
+
 
 
     @Override
@@ -16,35 +20,39 @@ public class FappActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        message = findViewById(R.id.ledigCounter);
-        ImageView cretin = findViewById(R.id.arriving);
+        textOpptatt = findViewById(R.id.opptattCounter);
+        textLedig = findViewById(R.id.ledigCounter);
+        ImageView arriving = findViewById(R.id.arriving);
+        ImageView leaving = findViewById(R.id.leaving);
 
-        //Define and attach click listener
-        cretin.setOnClickListener(new View.OnClickListener() {
+        arriving.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tapCretin();
+                tapArriving();
+            }
+        });
+        leaving.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tapLeaving();
             }
         });
     }
-    private void tapCretin() {
-        counter++;
-        String countAsText;
-        /*
-         * In real applications you should not write switch like the one below.
-         * Use resource of type "Quantity strings (plurals)" instead.
-         * See https://developer.android.com/guide/topics/resources/string-resource#Plurals
-         */
-        switch (counter) {
-            case 1:
-                countAsText = "once";
-                break;
-            case 2:
-                countAsText = "twices";
-                break;
-            default:
-                countAsText = String.format("%d times", counter);
+
+    private void tapArriving() {
+        if(seterLedig>0 && seterOpptatt<romKapasitet) {
+            seterOpptatt++;
+            seterLedig--;
+            textLedig.setText(String.format(String.valueOf(seterLedig)));
+            textOpptatt.setText(String.format(String.valueOf(seterOpptatt)));
         }
-        message.setText(String.format("You touched the cretin %s", countAsText));
+    }
+    private void tapLeaving() {
+        if(seterLedig<romKapasitet && seterOpptatt>0){
+            seterOpptatt--;
+            seterLedig++;
+            textLedig.setText(String.format(String.valueOf(seterLedig)));
+            textOpptatt.setText(String.format(String.valueOf(seterOpptatt)));
+        }
     }
 }

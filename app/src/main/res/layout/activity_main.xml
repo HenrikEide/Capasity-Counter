@@ -8,6 +8,24 @@
         tools:context=".FappActivity">
 
     <TextView
+        android:id="@+id/opptattCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/default_opptatt"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.564" />
+
+    <TextView
         android:id="@+id/ledigCounter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,12 +34,14 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:text="@string/default_ledig"
-        android:textColor="@color/text_color"
+        android:textColor="@android:color/holo_green_light"
         android:textSize="@dimen/text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.431" />
 
     <ImageView
         android:id="@+id/leaving"
