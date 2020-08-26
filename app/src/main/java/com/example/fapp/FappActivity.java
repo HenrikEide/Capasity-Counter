@@ -9,8 +9,8 @@ import android.widget.TextView;
 public class FappActivity extends AppCompatActivity {
     private TextView textLedig;
     private TextView textOpptatt;
-    private int romKapasitet = 55;
-    private int seterLedig = 55;
+    private final int romKapasitet = 55;
+    private int seterLedig = romKapasitet;
     private int seterOpptatt = 0;
 
 

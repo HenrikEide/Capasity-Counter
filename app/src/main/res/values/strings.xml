@@ -4,4 +4,6 @@
     <string name="buggypic">bugpix</string>
     <string name="default_ledig">55</string>
     <string name="default_opptatt">0</string>
+    <string name="ledigtext">Ledig</string>
+    <string name="opptatttext">Opptatt</string>
 </resources>
