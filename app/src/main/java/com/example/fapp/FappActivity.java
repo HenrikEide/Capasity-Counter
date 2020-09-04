@@ -39,7 +39,7 @@ public class FappActivity extends AppCompatActivity {
         });
     }
 
-    private void tapArriving() {
+    private void tapArriving() { //For arriving
         if(seterLedig>0 && seterOpptatt<romKapasitet) {
             seterOpptatt++;
             seterLedig--;
@@ -47,7 +47,7 @@ public class FappActivity extends AppCompatActivity {
             textOpptatt.setText(String.format(String.valueOf(seterOpptatt)));
         }
     }
-    private void tapLeaving() {
+    private void tapLeaving() { //For leaving
         if(seterLedig<romKapasitet && seterOpptatt>0){
             seterOpptatt--;
             seterLedig++;
