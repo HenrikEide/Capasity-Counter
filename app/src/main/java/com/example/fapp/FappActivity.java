@@ -1,5 +1,7 @@
 package com.example.fapp;
 
+import android.content.Intent;
+import android.media.Image;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,6 +26,14 @@ public class FappActivity extends AppCompatActivity {
         textLedig = findViewById(R.id.ledigCounter);
         ImageView arriving = findViewById(R.id.arriving);
         ImageView leaving = findViewById(R.id.leaving);
+        ImageView settings = findViewById(R.id.settings);
+
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(FappActivity.this, SettingsActivity.class));
+            }
+        });
 
         arriving.setOnClickListener(new View.OnClickListener() {
             @Override

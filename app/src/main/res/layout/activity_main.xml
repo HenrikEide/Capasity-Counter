@@ -6,23 +6,51 @@
     android:layout_height="match_parent"
     tools:context=".FappActivity">
 
-    <TextView
-        android:id="@+id/opptattCounter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:text="@string/default_opptatt"
-        android:textColor="@color/text_color"
-        android:textSize="32dp"
+    <ImageView
+        android:id="@+id/leaving"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintEnd_toStartOf="@+id/ledigCounter"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68" />
+        app:layout_constraintVertical_bias="0.498"
+        app:srcCompat="@drawable/leavingman" />
+
+    <ImageView
+        android:id="@+id/arriving"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ledigCounter"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrivingman" />
+
+    <FrameLayout
+        android:layout_width="142dp"
+        android:layout_height="113dp"
+        android:background="#E1E1E3"
+        app:layout_constraintBottom_toBottomOf="@+id/opptattText"
+        app:layout_constraintEnd_toEndOf="@+id/opptattCounter"
+        app:layout_constraintStart_toStartOf="@+id/opptattCounter"
+        app:layout_constraintTop_toTopOf="@+id/opptattCounter"
+        app:layout_constraintVertical_bias="0.318">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="132dp"
+        android:layout_height="117dp"
+        android:background="#E1E1E3"
+        app:layout_constraintBottom_toTopOf="@+id/ledigCounter"
+        app:layout_constraintEnd_toEndOf="@+id/ledigText"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="@+id/ledigText"
+        app:layout_constraintTop_toTopOf="@+id/ledigText"
+        app:layout_constraintVertical_bias="0.16">
+
+    </FrameLayout>
 
     <TextView
         android:id="@+id/ledigCounter"
@@ -44,6 +72,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.34" />
+
+    <TextView
+        android:id="@+id/opptattCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/default_opptatt"
+        android:textColor="@color/text_color"
+        android:textSize="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.68" />
 
     <TextView
         android:id="@+id/ledigText"
@@ -75,44 +121,15 @@
         app:layout_constraintVertical_bias="0.23" />
 
     <ImageView
-        android:id="@+id/arriving"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/ledigCounter"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/arrivingman" />
-
-    <ImageView
-        android:id="@+id/leaving"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ledigCounter"
+        android:id="@+id/settings"
+        android:layout_width="53dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="cogwheelpic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498"
-        app:srcCompat="@drawable/leavingman" />
-
-    <FrameLayout
-        android:layout_width="132dp"
-        android:layout_height="117dp"
-        app:layout_constraintBottom_toBottomOf="@+id/ledigCounter"
-        app:layout_constraintEnd_toEndOf="@+id/ledigCounter"
-        app:layout_constraintStart_toStartOf="@+id/ledigCounter"
-        app:layout_constraintTop_toTopOf="@+id/ledigText">
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_width="142dp"
-        android:layout_height="113dp"
-        app:layout_constraintBottom_toBottomOf="@+id/opptattText"
-        app:layout_constraintEnd_toEndOf="@+id/opptattCounter"
-        app:layout_constraintStart_toStartOf="@+id/opptattCounter"
-        app:layout_constraintTop_toTopOf="@+id/opptattCounter">
-
-    </FrameLayout>
+        app:srcCompat="@drawable/cogwheel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
