@@ -30,7 +30,7 @@ public class FappActivity extends AppCompatActivity {
 
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) { //Starts settings activity
                 startActivity(new Intent(FappActivity.this, SettingsActivity.class));
             }
         });
