@@ -1,6 +1,8 @@
 package com.example.fapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,7 +12,15 @@ public class SettingsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         ImageView backToMainBtn = findViewById(R.id.backfromSettings);
+
+        backToMainBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { //Back to main activity
+                startActivity(new Intent(SettingsActivity.this, FappActivity.class));
+            }
+        });
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
         getSupportFragmentManager()
