@@ -17,7 +17,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         backToMainBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { //Back to main activity
+            public void onClick(View v) { //Redirects to main activity
                 startActivity(new Intent(SettingsActivity.this, FappActivity.class));
             }
         });
