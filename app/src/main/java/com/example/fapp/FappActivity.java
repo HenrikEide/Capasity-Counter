@@ -16,7 +16,6 @@ public class FappActivity extends AppCompatActivity {
     private int seterOpptatt = 0;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
